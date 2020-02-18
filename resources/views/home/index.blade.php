@@ -23,8 +23,8 @@
                 <img class="left_car_img" src="{{'img/default.png'}}" alt="">
               </div>
 
-              <div class="col-lg-2">
-
+              <div class="col-lg-2 arrow_img_container">
+                <img class="arrow_img" height="60px" width="60px" src="{{'img/arrow.png'}}" alt="">
               </div>
 
               <div class="col-lg-5 right_car_img_container">

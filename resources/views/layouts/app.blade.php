@@ -51,7 +51,7 @@
             padding: 20px 50px 50px;
           }
 
-          .right_car_img_container, .left_car_img_container{
+          .right_car_img_container, .left_car_img_container, .arrow_img_container{
             display: flex;
             justify-content: center;
             align-items: center;
