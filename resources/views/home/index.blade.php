@@ -133,17 +133,25 @@
       $("[name='target_color']").css('border-color', 'red');
     }
 
-    if (currentColor == targetColor && targetColor != "" && currentColor != "") {
+    if (targetColor != "" && currentColor != "") {
 
-      e.preventDefault();
+      if (currentColor == targetColor) {
 
-      Swal.fire({
-        title: "Same Color not Allowed!",
-        text: "Please change Target Color different from Current Color.",
-        type: "error"
-      });
+        e.preventDefault();
+
+        $("[name='current_color']").css('border-color', 'red');
+        $("[name='target_color']").css('border-color', 'red');
+
+        Swal.fire({
+          title: "Same Color not Allowed!",
+          text: "Please change Target Color different from Current Color.",
+          type: "error"
+        });
+
+      }
 
     }
+
 
   });
 
@@ -184,19 +192,19 @@
 
   $("[name='current_color']").on("change", function(){
 
-    if ($(this).val() == "red") {
+    if ($(this).val() == "Red") {
 
       $(".left_car_img").attr('src', 'img/red.png');
 
     }
 
-    if ($(this).val() == "green") {
+    if ($(this).val() == "Green") {
 
       $(".left_car_img").attr('src', 'img/green.png');
 
     }
 
-    if ($(this).val() == "blue") {
+    if ($(this).val() == "Blue") {
 
       $(".left_car_img").attr('src', 'img/blue.png');
 
@@ -212,19 +220,19 @@
 
   $("[name='target_color']").on("change", function(){
 
-    if ($(this).val() == "red") {
+    if ($(this).val() == "Red") {
 
       $(".right_car_img").attr('src', 'img/red.png');
 
     }
 
-    if ($(this).val() == "green") {
+    if ($(this).val() == "Green") {
 
       $(".right_car_img").attr('src', 'img/green.png');
 
     }
 
-    if ($(this).val() == "blue") {
+    if ($(this).val() == "Blue") {
 
       $(".right_car_img").attr('src', 'img/blue.png');
 
